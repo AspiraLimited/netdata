@@ -90,6 +90,7 @@ GLOBAL_STATS = [
     'Innodb_buffer_pool_write_requests',
     'Innodb_buffer_pool_reads',
     'Innodb_buffer_pool_wait_free',
+    'Innodb_deadlocks',
     'Qcache_hits',
     'Qcache_lowmem_prunes',
     'Qcache_inserts',
@@ -380,6 +381,13 @@ CHARTS = {
                     'mysql.innodb_cur_row_lock', 'area'],
         'lines': [
             ['Innodb_row_lock_current_waits', 'current_waits', 'absolute']
+        ]
+    },
+    'innodb_deadlocks': {
+        'options': [None, 'InnoDB Deadlocks', 'operations', 'innodb',
+                    'mysql.innodb_deadlocks', 'area'],
+        'lines': [
+            ['Innodb_deadlocks', 'deadlocks', 'incremental']
         ]
     },
     'innodb_rows': {
